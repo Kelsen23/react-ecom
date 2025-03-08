@@ -1,12 +1,14 @@
+import { BrowserRouter as Router } from "react-router-dom";
+import Sidebar from "./components/Sidebar";
 
 const App = () => {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
-    </div>
-  )
-}
+    <Router>
+      <div className="flex h-screen">
+        <Sidebar />
+      </div>
+    </Router>
+  );
+};
 
-export default App
+export default App;
