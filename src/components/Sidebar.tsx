@@ -20,7 +20,6 @@ const Sidebar = () => {
     setMinPrice,
     maxPrice,
     setMaxPrice,
-    keyword,  
     setKeyword,
   } = useFilter();
 
@@ -92,7 +91,7 @@ const Sidebar = () => {
       <section>
         <input
           type="text"
-          className="border-2 rounded px-2 sm:mb-0"
+          className="border-2 rounded px-2 mb-3"
           placeholder="Search Product"
           value={searchQuery}
           onChange={e => setSearchQuery(e.target.value)}
