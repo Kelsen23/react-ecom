@@ -10,7 +10,6 @@ interface FetchResponse {
 }
 
 const Sidebar = () => {
-
   const {
     searchQuery,
     setSearchQuery,
@@ -61,20 +60,20 @@ const Sidebar = () => {
   const handleMinPriceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setMinPrice(value ? parseFloat(value) : undefined);
-  }
+  };
 
   const handleMaxPriceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setMaxPrice(value ? parseFloat(value) : undefined);
-  } 
+  };
 
   const handleRadioChange = (category: string) => {
     setSelectedCategory(category);
-  }
+  };
 
-  const handleKeywordClick = (keyword: string) => { 
+  const handleKeywordClick = (keyword: string) => {
     setKeyword(keyword);
-  }
+  };
 
   const handleResetFilters = () => {
     setSearchQuery("");
@@ -82,32 +81,33 @@ const Sidebar = () => {
     setMinPrice(undefined);
     setMaxPrice(undefined);
     setKeyword("");
-  }
+  };
 
   return (
-    <div className="w-64 p-5 h-screen">
+    <div className="w-128 p-5 h-screen mr-5">
       <h1 className="text-2xl font-bold mb-10 mt-4">React Store</h1>
 
       <section>
         <input
           type="text"
-          className="border-2 rounded px-2 mb-3"
+          className="border-2 border-gray-300 rounded-lg w-full max-w-[300px] py-3 px-4 mb-4 text-gray-700 focus:outline-none shadow-sm"
           placeholder="Search Product"
           value={searchQuery}
-          onChange={e => setSearchQuery(e.target.value)}
+          onChange={(e) => setSearchQuery(e.target.value)}
         />
 
-        <div className="flex justify-center items-center">
+        <div className="flex mb-3 justify-center items-center w-full gap-2">
           <input
             type="number"
-            className="border-2 mr-2 px-5 py-3 mb-3 w-full"
+            className="border-2 border-gray-300 rounded-lg py-3 px-4 w-full max-w-[140px] text-gray-700 focus:outline-none shadow-sm"
             placeholder="Min"
             value={minPrice ?? ""}
             onChange={handleMinPriceChange}
           />
+
           <input
             type="number"
-            className="border-2 mr-2 px-5 py-3 mb-3 w-full"
+            className="border-2 border-gray-300 rounded-lg py-3 px-4 w-full max-w-[140px] text-gray-700 focus:outline-none shadow-sm"
             placeholder="Max"
             value={maxPrice ?? ""}
             onChange={handleMaxPriceChange}
@@ -137,17 +137,23 @@ const Sidebar = () => {
 
           <div>
             {keywords.map((keyword, index) => (
-              <button key={index} onClick={() => handleKeywordClick(keyword)} className="block mb-2 px-4 py-2 w-full text-left border rounded hover:bg-gray-200 cursor-pointer">
+              <button
+                key={index}
+                onClick={() => handleKeywordClick(keyword)}
+                className="block mb-2 px-4 py-2 w-full text-left border rounded hover:bg-gray-200 cursor-pointer"
+              >
                 {keyword.toUpperCase()}
               </button>
             ))}
           </div>
         </div>
 
-        <button onClick={handleResetFilters} className="w-full mb-[4rem] py-2 bg-black text-white rounded mt-4 cursor-pointer">
+        <button
+          onClick={handleResetFilters}
+          className="w-full mb-[4rem] py-2 bg-black text-white rounded mt-4 cursor-pointer"
+        >
           Reset Filters
         </button>
-
       </section>
     </div>
   );
