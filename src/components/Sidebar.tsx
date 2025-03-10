@@ -100,16 +100,18 @@ const Sidebar = () => {
           <input
             type="number"
             className="border-2 border-gray-300 rounded-lg py-3 px-4 w-full max-w-[140px] text-gray-700 focus:outline-none shadow-sm"
-            placeholder="Min"
+            placeholder="Min Price"
             value={minPrice ?? ""}
+            step="5"
             onChange={handleMinPriceChange}
           />
 
           <input
             type="number"
             className="border-2 border-gray-300 rounded-lg py-3 px-4 w-full max-w-[140px] text-gray-700 focus:outline-none shadow-sm"
-            placeholder="Max"
+            placeholder="Max Price"
             value={maxPrice ?? ""}
+            step="5"
             onChange={handleMaxPriceChange}
           />
         </div>
