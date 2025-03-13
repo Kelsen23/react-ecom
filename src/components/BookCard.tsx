@@ -9,7 +9,7 @@ interface BookCardProps {
 
 const BookCard: React.FC<BookCardProps> = ({ id, title, image, price }) => {
   return (
-    <div className="border p-4 rounded">
+    <div className="p-4 rounded">
       <Link to={`./product/${id}`}>
         <img
           src={image}
