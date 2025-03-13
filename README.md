@@ -31,8 +31,8 @@ A modern e-commerce web application built with **React**, **TypeScript**, **Tail
 Here are some screenshots from the website:
 
 ![Screenshot 1](./public/screenshot1.png)
-![Screenshot 2](./public/screenshot2.PNG)
-![Screenshot 3](./public/screenshot3.PNG)
+![Screenshot 2](./public/screenshot2.png)
+![Screenshot 3](./public/screenshot3.png)
 
 
 ## Installation
@@ -50,7 +50,7 @@ Here are some screenshots from the website:
     npm run dev
 
 ## Contributing
-    Feel free to submit issues or contribute by opening pull requests. 🎉
+  Feel free to submit issues or contribute by opening pull requests. 🎉
 
 ## License
-    This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+  This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
