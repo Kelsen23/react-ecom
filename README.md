@@ -30,9 +30,10 @@ A modern e-commerce web application built with **React**, **TypeScript**, **Tail
 
 Here are some screenshots from the website:
 
-![Screenshot 1](./public/screenshot1.png)
-![Screenshot 2](./public/screenshot2.png)
-![Screenshot 3](./public/screenshot3.png)
+![Screenshot 1](./public/screenshot-1.png)
+![Screenshot 2](./public/screenshot-2.png)
+![Screenshot 3](./public/screenshot-3.png)
+![Screenshot 4](./public/screenshot-4.png)
 
 
 ## Installation
